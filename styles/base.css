@@ -1,0 +1,263 @@
+/* Base styles and CSS reset */
+:root {
+  --primary-color: #0f4c75;
+  --secondary-color: #1e40af;
+  --text-color: #2d3748;
+  --background-color: #f7fafc;
+  --card-background: #ffffff;
+  --header-font: 'Playfair Display', serif;
+  --body-font: 'Inter', sans-serif;
+  --card-height: 600px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--background-color);
+}
+
+/* Header styles */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--header-font);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Main content styles */
+main {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: var(--card-height);
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  font-family: var(--header-font);
+  font-size: 1.75rem;
+  padding: 1rem;
+  color: white;
+  background-color: var(--primary-color);
+  margin: 0;
+  text-align: center;
+}
+
+/* About section styles */
+.about-content {
+  padding: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  flex-direction: row; /* Ensure the image remains on the right */
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  flex: 1;
+  text-align: justify;
+}
+
+.profile-photo {
+  width: 80px;
+  height: auto;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+
+.about-section {
+  margin-bottom: 1rem; /* Adjust the margin as needed to reduce the gap */
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem; /* Adjust the padding as needed to reduce the gap */
+}
+
+.location-info h3 {
+  margin-bottom: 1rem; /* Adjust the margin as needed */
+}
+
+.location-info h3::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 1px;
+  background-color: #000; /* Adjust the color as needed */
+  margin: 0.5rem auto 0; /* Adjust the margin as needed */
+}
+
+.location-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: row; /* Ensure the flag remains on the left */
+}
+
+.flag-container {
+  flex: 0 0 150px;
+}
+
+.location-content {
+  flex: 1;
+}
+
+.flag {
+  width: 100%;
+  height: auto;
+  border: 1px solid #e2e8f0;
+}
+
+.flag-caption {
+  font-size: 0.875rem;
+  color: #666;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Resources section styles */
+.resources-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.resources-section ul {
+  padding: 2rem;
+  list-style: disc;
+  margin-left: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.resources-section li {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+.resources-section a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.resources-section a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer span {
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: auto;
+    min-height: var(--card-height);
+  }
+
+  .about-content {
+    flex-direction: row; /* Ensure the image remains on the right */
+  }
+
+  .profile-photo {
+    /* width: 100%; */
+    max-width: 80px;
+    margin: 0 auto 1rem;
+  }
+
+  .about-text {
+    text-align: left;
+  }
+
+  .location-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .flag-container {
+    margin: 0 auto 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
