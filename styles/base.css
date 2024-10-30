@@ -109,8 +109,8 @@ h3 {
 
 .profile-photo {
   width: 80px;
-  height: 100px; /* Adjust the height as needed */
-  background-image: url('/images/profile.jpg');
+  height: auto; /* Adjust the height as needed */
+  background-image: url('../images/profile.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 0.25rem;
@@ -158,7 +158,7 @@ h3 {
 .flag {
   width: 150px; /* Adjust the width as needed */
   height: 100px; /* Adjust the height as needed */
-  background-image: url('/images/Flag_of_Uganda.svg');
+  background-image: url('../images/Flag_of_Uganda.jpg');
   background-size: cover;
   background-position: center;
   border: 1px solid #e2e8f0;
