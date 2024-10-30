@@ -27,7 +27,7 @@ body {
 header {
   background-color: var(--primary-color);
   color: white;
-  /* padding: 2rem 1rem; */
+  padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -37,16 +37,11 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-/* .orange-text { */
-  /* color: orange; for coloring the text orange in the h1 heading */
-/* } */
-
 nav {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  background-color: #010320;
 }
 
 nav a {
@@ -114,7 +109,10 @@ h3 {
 
 .profile-photo {
   width: 80px;
-  height: auto;
+  height: 100px; /* Adjust the height as needed */
+  background-image: url('/images/profile.jpg');
+  background-size: cover;
+  background-position: center;
   border-radius: 0.25rem;
   margin-top: 1rem;
 }
@@ -127,7 +125,6 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.5rem;
   padding-top: 1rem; /* Adjust the padding as needed to reduce the gap */
 }
 
@@ -138,17 +135,16 @@ h3 {
 .location-info h3::after {
   content: "";
   display: block;
-  width: 100%; /* Adjust the width as needed */
+  width: 80%;
   height: 1px;
-  background-color: #b3b6c7; /* Adjust the color as needed */
-  margin: 0.5rem auto; /* Center the line */
+  background-color: #000; /* Adjust the color as needed */
+  margin: 0.5rem auto 0; /* Adjust the margin as needed */
 }
 
 .location-details {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex-direction: row; /* Ensure the flag remains on the left */
 }
 
 .flag-container {
@@ -160,14 +156,17 @@ h3 {
 }
 
 .flag {
-  width: 100%;
-  height: auto;
+  width: 150px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  background-image: url('/images/Flag_of_Uganda.svg');
+  background-size: cover;
+  background-position: center;
   border: 1px solid #e2e8f0;
 }
 
 .flag-caption {
   font-size: 0.875rem;
-  color: #0f1111;
+  color: #666;
   text-align: center;
   margin-top: 0.5rem;
 }
