@@ -144,6 +144,7 @@ h3 {
 .location-details {
   display: flex;
   align-items: center;
+  padding: 1.5rem; /* Adjust the padding as needed */
   gap: 1rem;
 }
 
