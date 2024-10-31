@@ -27,7 +27,7 @@ body {
 header {
   background-color: var(--primary-color);
   color: white;
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
   text-align: center;
 }
 
@@ -40,8 +40,9 @@ h1 {
 nav {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 3rem;
   flex-wrap: wrap;
+  background-color: #040924;
 }
 
 nav a {
