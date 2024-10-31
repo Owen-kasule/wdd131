@@ -206,6 +206,10 @@ h3 {
   text-decoration: underline;
 }
 
+.header-highlight {
+  color: orange;
+}
+
 /* Footer styles */
 footer {
   background-color: var(--primary-color);
