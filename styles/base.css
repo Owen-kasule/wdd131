@@ -249,6 +249,14 @@ footer span {
     max-width: 80px;
     height: 100px;
     margin: 0 auto 1rem;
+    overflow: hidden; /* Ensure any overflow is hidden */
+  }
+  
+  .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    object-position: center; /* Center the image within the container */
   }
 
   .about-text {
