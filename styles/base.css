@@ -247,6 +247,7 @@ footer span {
 
   .profile-photo {
     max-width: 80px;
+    height: 100px;
     margin: 0 auto 1rem;
   }
 
