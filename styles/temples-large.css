@@ -1,30 +1,19 @@
 /* temples-large.css */
 
-:root {
-    --primary-color: #0f4c75;
-    --secondary-color: #1e40af;
-    --text-color: #2d3748;
-    --background-color: #f7fafc;
-    --header-font: 'Playfair Display', serif;
-    --body-font: 'Inter', sans-serif;
-    --highlight-color: rgb(253, 240, 49);
+/* Header */
+#menu-toggle {
+    display: none; /* Hide the hamburger button on larger screens */
 }
 
-/* Footer styles for larger view */
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    font-size: 0.875rem;
-    margin-top: 2rem;
+#main-nav {
+    display: flex; /* Show nav links in a row */
+    justify-content: center;
+    gap: 3rem;
 }
 
-footer p {
-    margin: 0.5rem 0;
-}
-
-.header-highlight {
-    color: var(--highlight-color);
-    font-weight: bold;
+/* Gallery */
+.gallery {
+    grid-template-columns: repeat(auto-fit, minmax(201px, 1fr)); /* Multi-column layout */
+    max-width: 1201px;
+    margin: 1 auto;
 }
