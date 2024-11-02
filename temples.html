@@ -1,4 +1,3 @@
-<!-- temples.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Temple Album">
     <title>Temple Album</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
     <script src="scripts/temples.js" defer></script>
@@ -14,6 +14,7 @@
 
 <header>
     <h1>Temple Album</h1>
+    <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
     <nav id="main-nav">
         <a href="#">Home</a>
         <a href="#">Old</a>
@@ -21,7 +22,6 @@
         <a href="#">Large</a>
         <a href="#">Small</a>
     </nav>
-    <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
 </header>
 
 <main>
@@ -32,11 +32,16 @@
             <figcaption>San Diego California</figcaption>
         </figure>
         <!-- Repeat figure element for additional images -->
+        <figure>
+            <img src="images/temple-placeholder.jpg" alt="San Diego California">
+            <figcaption>San Diego California</figcaption>
+        </figure>
+        <!-- Add at least 9 figures as per instructions -->
     </section>
 </main>
 
 <footer>
-    <p>© <span id="currentyear"></span> | Rubia Magdalena Francesco | Madagascar</p>
+    <p>© <span id="currentyear"></span> | Owen Kasule Muhereza | Kampala, Uganda</p>
     <p id="lastModified" class="header-highlight"></p>
 </footer>
 

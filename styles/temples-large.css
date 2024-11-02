@@ -1,0 +1,30 @@
+/* temples-large.css */
+
+:root {
+    --primary-color: #0f4c75;
+    --secondary-color: #1e40af;
+    --text-color: #2d3748;
+    --background-color: #f7fafc;
+    --header-font: 'Playfair Display', serif;
+    --body-font: 'Inter', sans-serif;
+    --highlight-color: rgb(253, 240, 49);
+}
+
+/* Footer styles for larger view */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.875rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.header-highlight {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
