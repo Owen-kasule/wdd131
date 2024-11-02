@@ -1,0 +1,44 @@
+<!-- temples.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temple Album">
+    <title>Temple Album</title>
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Temple Album</h1>
+    <nav id="main-nav">
+        <a href="#">Home</a>
+        <a href="#">Old</a>
+        <a href="#">New</a>
+        <a href="#">Large</a>
+        <a href="#">Small</a>
+    </nav>
+    <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+</header>
+
+<main>
+    <h2>Home</h2>
+    <section class="gallery">
+        <figure>
+            <img src="images/temple-placeholder.jpg" alt="San Diego California">
+            <figcaption>San Diego California</figcaption>
+        </figure>
+        <!-- Repeat figure element for additional images -->
+    </section>
+</main>
+
+<footer>
+    <p>© <span id="currentyear"></span> | Rubia Magdalena Francesco | Madagascar</p>
+    <p id="lastModified" class="header-highlight"></p>
+</footer>
+
+</body>
+</html>
