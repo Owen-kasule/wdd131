@@ -6,33 +6,35 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
+    background-color: var(--primary-color);
 }
 
 header h1 {
     font-size: 1.75rem;
     color: white;
+    margin: 0;
 }
 
+#menu-toggle {
+    display: none; /* Hide the hamburger menu button on larger screens */
+}
+
+/* Navigation - Horizontal layout for larger screens */
 #main-nav {
-    display: flex;           
-    width: 100%;            /* Ensure nav takes full width */
-    gap: 2rem;              
-    justify-content: space-around; /* Distribute items evenly */
-    align-items: center;     
+    display: flex; /* Show navigation items in a row */
+    flex-direction: row;
+    gap: 2rem;
 }
 
-#main-nav a {
-    display: inline-block;   /* Ensure links have block properties */
+nav a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    padding: 0.5rem 1rem;    
+    padding: 0.5rem 0;
     transition: color 0.3s ease;
-    flex: 1;                /* Allow links to grow evenly */
-    text-align: center;     /* Center text within links */
 }
 
-#main-nav a:hover {
+nav a:hover {
     color: #ddd;
 }
 
@@ -41,7 +43,6 @@ main {
     max-width: 1200px; /* Center and limit width on larger screens */
     margin: 0 auto;
     padding: 2rem 0;
-    text-align: center; /* Center-align the main heading */
 }
 
 h2 {
