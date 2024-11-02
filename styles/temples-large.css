@@ -13,26 +13,22 @@ header h1 {
     color: white;
 }
 
-#menu-toggle {
-    display: none; /* Hide the hamburger button on larger screens */
-}
-
-/* Center-align navigation links and display them in a row */
 #main-nav {
-    display: flex;
-    gap: 2rem;
-    justify-content: flex-end;
+    display: flex;           /* Makes items flow horizontally */
+    gap: 2rem;              /* Adds space between items */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center;     /* Centers items vertically */
 }
 
-nav a {
+#main-nav a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;    /* Add horizontal padding */
     transition: color 0.3s ease;
 }
 
-nav a:hover {
+#main-nav a:hover {
     color: #ddd;
 }
 
