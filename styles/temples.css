@@ -1,12 +1,11 @@
-/* temples.css */
-
 /* Base styles and CSS reset */
 :root {
-    --primary-color: #4A148C;
-    --secondary-color: #6A1B9A;
-    --text-color: #333;
+    --primary-color: #0f4c75;
+    --secondary-color: #1e40af;
+    --text-color: #2d3748;
     --background-color: #f7fafc;
-    --highlight-color: #FDF031;
+    --header-font: 'Playfair Display', serif;
+    --body-font: 'Inter', sans-serif;
 }
 
 * {
@@ -16,9 +15,10 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--body-font);
     color: var(--text-color);
     background-color: var(--background-color);
+    line-height: 1.6;
 }
 
 /* Header */
@@ -31,6 +31,7 @@ header {
 }
 
 header h1 {
+    font-family: var(--header-font);
     font-size: 1.5rem;
     margin: 0;
 }
@@ -54,6 +55,7 @@ header h1 {
     gap: 1rem;
     text-align: center;
     padding: 1rem 0;
+    background-color: #040924;
 }
 
 #main-nav.visible {
@@ -63,12 +65,13 @@ header h1 {
 nav a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
     background-color: var(--secondary-color);
-    border-radius: 0.25rem;
 }
 
 /* Main content */
@@ -77,6 +80,14 @@ main {
     text-align: center;
 }
 
+h2 {
+    font-family: var(--header-font);
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Gallery */
 .gallery {
     display: grid;
     grid-template-columns: 1fr; /* Single column for mobile */
@@ -84,6 +95,10 @@ main {
 }
 
 figure {
+    background-color: var(--card-background);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -94,22 +109,27 @@ figure img {
 }
 
 figcaption {
-    margin-top: 0.5rem;
-    font-size: 1rem;
+    padding: 0.5rem;
     color: var(--primary-color);
 }
 
-/* Footer */
+/* Footer styles */
 footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.875rem;
+    padding: 2rem 1rem;
     margin-top: 2rem;
-}
+  }
+  
+  footer p {
+    margin: 0.5rem 0;
+  }
+  
+  footer span {
+    font-weight: bold;
+  }
 
 .header-highlight {
-    color: var(--highlight-color);
-    font-weight: bold;
-}
+    color: rgb(253, 240, 49);
+  }
