@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information about Kampala, Uganda">
+    <meta name="author" content="Owen Kasule Muhereza">
+    <title>Kampala, Uganda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Kampala, Uganda</h1>
+        <nav id="main-nav">
+            <a href="#">Home</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <picture>
+            <source media="(max-width: 600px)" srcset="images/kampala-mobile.webp">
+            <source media="(min-width: 601px)" srcset="images/kampala-desktop.webp">
+            <img src="images/kampala-desktop.webp" alt="Scenic view of Kampala City" class="hero-image">
+        </picture>
+
+        <section class="card data-section">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 189 sq km</li>
+                <li><strong>Population:</strong> 1,650,800</li>
+                <li><strong>Capital:</strong> Kampala</li>
+                <li><strong>Languages:</strong> English, Luganda</li>
+                <li><strong>Currency:</strong> Ugandan Shilling (UGX)</li>
+                <li><strong>Time Zone:</strong> UTC+3</li>
+                <li><strong>Calling Code:</strong> +256</li>
+                <li><strong>Internet TLD:</strong> .ug</li>
+            </ul>
+        </section>
+
+        <section class="card weather-section">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <ul>
+                <li><strong>Temperature:</strong> <span id="temp">26°C</span></li>
+                <li><strong>Conditions:</strong> Sunny</li>
+                <li><strong>Wind:</strong> <span id="wind-speed">10 km/h</span></li>
+                <li><strong>Wind Chill:</strong> <span id="wind-chill">Calculating...</span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> | Owen Kasule Muhereza | Kampala, Uganda</p>
+        <p id="lastModified" class="header-highlight"></p>
+    </footer>
+</body>
+</html>
