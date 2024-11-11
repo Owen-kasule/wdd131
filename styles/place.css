@@ -139,6 +139,13 @@ footer span {
     .weather-section .weather-icon {
         font-size: 2rem; /* Increase the weather icon size on mobile */
     }
+
+    .mobile-weather-icon {
+        display: block;
+        width: 100px; /* Adjust size as needed */
+        height: auto;
+        margin: 1rem auto; /* Center the image */
+    }
 }
 
 /* Responsive styling for wide screens */
@@ -159,6 +166,10 @@ footer span {
         position: absolute;
         bottom: 20px; /* Move weather card to the bottom on larger screens */
         right: 20px;
+    }
+
+    .mobile-weather-icon {
+        display: none;
     }
 }
 
