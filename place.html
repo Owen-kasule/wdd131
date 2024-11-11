@@ -17,8 +17,14 @@
     </header>
 
     <main>
-        <section class="info-container">
-            <div class="card data-section">
+        <div class="hero-section">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/kampala-mobile.webp">
+                <source media="(min-width: 601px)" srcset="images/kampala-desktop.webp">
+                <img src="images/kampala-desktop.webp" alt="Scenic view of Kampala City" class="hero-image">
+            </picture>
+
+            <div class="overlay data-section card">
                 <h2>Data</h2>
                 <ul>
                     <li><strong>Area:</strong> 189 sq km</li>
@@ -32,13 +38,7 @@
                 </ul>
             </div>
 
-            <picture>
-                <source media="(max-width: 600px)" srcset="images/kampala-mobile.webp">
-                <source media="(min-width: 601px)" srcset="images/kampala-desktop.webp">
-                <img src="images/kampala-desktop.webp" alt="Scenic view of Kampala City" class="hero-image">
-            </picture>
-
-            <div class="card weather-section">
+            <div class="overlay weather-section card">
                 <h2>Weather <span class="weather-icon">⛅</span></h2>
                 <ul>
                     <li><strong>Temperature:</strong> <span id="temp">Loading...</span></li>
@@ -47,7 +47,7 @@
                     <li><strong>Wind Chill:</strong> <span id="wind-chill">Calculating...</span></li>
                 </ul>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
