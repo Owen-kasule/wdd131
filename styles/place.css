@@ -1,23 +1,18 @@
 /* Base styles */
 :root {
-    --primary-color: #0f4c75; /* Matches your existing theme */
+    --primary-color: #0f4c75;
     --secondary-color: #1e40af;
     --text-color: #2d3748;
     --background-color: #f7fafc;
-    --card-background: #ffffff;
+    --card-background: rgba(255, 255, 255, 0.8); /* Semi-transparent for overlay */
     --header-font: 'Playfair Display', serif;
     --body-font: 'Inter', sans-serif;
 }
 
 body {
     font-family: var(--body-font);
-    background-image: url(../images/Kampala-1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: var(--background-color);
     color: var(--text-color);
-    line-height: 1.6;
     margin: 0;
     padding: 0;
 }
@@ -35,53 +30,33 @@ header h1 {
     margin: 0;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    background-color: #040924;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: var(--secondary-color);
-}
-
 main {
     padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-image: url(../images/Kampala-1.jpg); */
+}
+
+.hero-section {
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .hero-image {
     width: 100%;
     border-radius: 0.5rem;
-    margin-bottom: 2rem;
 }
 
-.card {
+/* Overlay cards */
+.overlay {
+    position: absolute;
     background-color: var(--card-background);
-    opacity: 0.8;
-    /* background-color: rgba(255, 255, 255, 0.8); Assuming --card-background is white */
     padding: 1.5rem;
     border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    width: 100%;
-    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    max-width: 300px;
 }
 
 .card h2 {
-    font-family: var(--header-font);
     background-color: var(--primary-color);
     color: white;
     padding: 0.5rem;
@@ -90,15 +65,39 @@ main {
     margin: 0;
 }
 
-/* Footer */
 footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1.5rem;
-    margin-top: 2rem;
 }
 
 footer p {
     margin: 0.5rem 0;
 }
+
+/* Responsive styling for wide screens */
+@media screen and (min-width: 768px) {
+    .hero-section {
+        position: relative;
+        max-width: 1200px;
+    }
+
+    /* Position the overlays on the sides of the hero image */
+    .data-section {
+        top: 20px;
+        left: 20px;
+    }
+
+    .weather-section {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
