@@ -137,12 +137,12 @@ footer span {
     }
 
     .weather-section .weather-icon {
-        font-size: 2rem; /* Increase the weather icon size on mobile */
+        display: none; /* Hide the weather icon on mobile */
     }
 
     .mobile-weather-icon {
         display: block;
-        width: 100px; /* Adjust size as needed */
+        width: 200px; /* 2x bigger */
         height: auto;
         margin: 1rem auto; /* Center the image */
     }
@@ -169,7 +169,11 @@ footer span {
     }
 
     .mobile-weather-icon {
-        display: none;
+        display: none; /* Hide the image on larger screens */
+    }
+
+    .weather-section .weather-icon {
+        display: inline; /* Show the weather icon on larger screens */
     }
 }
 
