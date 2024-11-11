@@ -34,26 +34,35 @@ main {
     padding: 2rem 1rem;
 }
 
+/* Hero section container */
 .hero-section {
     position: relative;
-    /* text-align: center; */
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
+/* Picture element styling */
+picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Hero image styling */
 .hero-image {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: 0.5rem;
 }
 
-/* Overlay cards */
-.overlay {
-    position: absolute;
-    background-color: var(--card-background);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    max-width: 300px;
+/* Media queries for responsive images */
+@media screen and (max-width: 600px) {
+    .hero-section {
+        height: 50vh;
+    }
 }
 
 .card h2 {
