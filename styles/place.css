@@ -58,13 +58,14 @@ main {
 
 /* Overlay cards */
 .overlay {
-    position: absolute;
     background-color: var(--card-background);
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     max-width: 300px;
     z-index: 2; /* Ensures overlays appear above the image */
+    margin: 1rem auto;
+    width: 90%; /* Full width for mobile view */
 }
 
 .card h2 {
@@ -119,6 +120,22 @@ footer span {
     font-weight: bold;
 }
 
+/* Responsive styling for mobile screens */
+@media screen and (max-width: 767px) {
+    .data-section, .weather-section {
+        position: static; /* Remove absolute positioning on mobile */
+        width: auto; /* Allow full width */
+        margin-top: 1rem; /* Add some space between sections */
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+    }
+}
+
 /* Responsive styling for wide screens */
 @media screen and (min-width: 768px) {
     .hero-section {
@@ -128,12 +145,14 @@ footer span {
 
     /* Position the overlays on the sides of the hero image */
     .data-section {
+        position: absolute;
         top: 20px;
         left: 20px;
     }
 
     .weather-section {
-        bottom: 20px; /* Move weather card to the bottom */
+        position: absolute;
+        bottom: 20px; /* Move weather card to the bottom on larger screens */
         right: 20px;
     }
 }
