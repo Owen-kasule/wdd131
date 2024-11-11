@@ -42,7 +42,7 @@ main {
 
 .hero-section {
     position: relative;
-    text-align: center;
+    /* text-align: center; */
     width: 100vw;
     margin: 0 auto;
 }
