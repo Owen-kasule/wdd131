@@ -42,14 +42,14 @@ main {
 
 .hero-section {
     position: relative;
-    /* text-align: center; */
+    text-align: center;
     width: 100vw;
     margin: 0 auto;
 }
 
 .hero-image {
     width: 100vw; /* Full viewport width */
-    height: auto; /* Maintain aspect ratio */
+    height: 50vh; /* Adjust height based on your preference */
     object-fit: cover; /* Ensures the image covers the area without distortion */
     border-radius: 0;
     position: relative;
@@ -76,6 +76,26 @@ main {
     margin: 0;
 }
 
+/* Styling for list items in the card */
+.overlay ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.overlay li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.overlay li strong {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Footer */
 footer {
     background-color: var(--primary-color);
     color: white;
