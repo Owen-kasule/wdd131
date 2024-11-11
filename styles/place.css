@@ -55,27 +55,15 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-}
-
-/* Image styles */
-picture {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    background-image: url(../images/Kampala-1.jpg);
 }
 
 .hero-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
     border-radius: 0.5rem;
+    margin-bottom: 2rem;
 }
 
-/* Card sections */
 .card {
     background-color: var(--card-background);
     padding: 1.5rem;
@@ -84,9 +72,16 @@ picture {
     margin-bottom: 2rem;
     width: 100%;
     max-width: 800px;
-    position: relative;
-    z-index: 2;
-    opacity: 0.9;
+}
+
+.card h2 {
+    font-family: var(--header-font);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    margin: 0;
 }
 
 /* Footer */
