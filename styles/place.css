@@ -62,7 +62,7 @@ main {
 }
 
 .hero-image {
-    width: 100vw; /* Full viewport width */
+    width: 100vw; /* Full viewport width on mobile */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensures the image covers the area without distortion */
     border-radius: 0;
@@ -156,200 +156,6 @@ footer span {
     .weather-section .weather-icon {
         display: none; /* Hide the weather icon on mobile */
     }
-}
-
-/* Responsive styling for wide screens */
-@media screen and (min-width: 768px) {
-    .hero-section {
-        position: relative;
-        max-width: 100vw;
-    }
-
-    /* Position the overlays on the sides of the hero image */
-    .data-section {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-    }
-
-    .weather-section {
-        position: absolute;
-        bottom: 20px; /* Move weather card to the bottom on larger screens */
-        right: 20px;
-    }
-
-    .weather-section .weather-icon {
-        font-size: 1rem; /* Restore weather icon size for larger screens */
-        display: inline; /* Ensure the icon appears on larger screens */
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-}
-/* Base styles */
-:root {
-    --primary-color: #0f4c75;
-    --secondary-color: #1e40af;
-    --text-color: #2d3748;
-    --background-color: #f7fafc;
-    --card-background: rgba(255, 255, 255, 0.9); /* Slightly opaque for readability */
-    --header-font: 'Playfair Display', serif;
-    --body-font: 'Inter', sans-serif;
-    --highlight-color: yellow; /* Added highlight color */
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Ensures consistent sizing without extra spacing */
-}
-
-body {
-    font-family: var(--body-font);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    overflow-x: hidden; /* Prevents horizontal scroll caused by full-width elements */
-}
-
-header {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: relative; /* Ensure the ::after pseudo-element is positioned correctly */
-    z-index: 10; /* Ensure header is above other elements */
-}
-
-header h1 {
-    font-family: var(--header-font);
-    font-size: 2rem;
-    margin: 0;
-}
-
-header::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px; /* Adjust height as needed */
-    background-color: var(--highlight-color); /* Use the highlight color */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-main {
-    padding: 0; /* Remove padding around the main content */
-    margin: 0;
-}
-
-.hero-section {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.hero-image {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 40vw; /* Adjust height based on your preference */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 0;
-    position: relative;
-    z-index: 1; /* Image stays behind the overlays */
-}
-
-/* Overlay cards */
-.overlay {
-    background-color: var(--card-background);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    max-width: 300px;
-    z-index: 2; /* Ensures overlays appear above the image */
-    margin: 1rem auto;
-    width: 90%; /* Full width for mobile view */
-}
-
-.card h2 {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-/* Styling for list items in the card */
-.overlay ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.overlay li {
-    display: grid;
-    grid-template-columns: 120px auto; /* Fixed width for labels, auto for values */
-    margin-bottom: 0.5rem;
-    text-align: left;
-}
-
-.overlay li strong {
-    font-weight: bold;
-    color: var(--text-color);
-    text-align: right; /* Align label to the right within its column */
-    padding-right: 0.5rem; /* Small padding to separate label from value */
-}
-
-.overlay li span {
-    font-weight: normal;
-    color: var(--text-color);
-    text-align: left; /* Align value to the left within its column */
-}
-
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 1.5rem 1rem;
-}
-  
-footer p {
-    margin: 0.5rem 0;
-}
-
-footer span {
-    font-weight: bold;
-}
-
-/* Responsive styling for mobile screens */
-@media screen and (max-width: 767px) {
-    .data-section, .weather-section {
-        position: static; /* Remove absolute positioning on mobile */
-        width: 100%; /* Take up full width on mobile */
-        margin-top: 1rem; /* Add some space between sections */
-        max-width: none; /* Remove max-width for full-width display */
-    }
-
-    .hero-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 1rem;
-    }
-
-    .hero-image {
-        width: 100%; /* Ensure full width on mobile */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    .weather-section .weather-icon {
-        display: none; /* Hide the weather icon on mobile */
-    }
 
     .mobile-weather-icon {
         display: block;
@@ -379,12 +185,13 @@ footer span {
         right: 20px;
     }
 
-    .mobile-weather-icon {
-        display: none; /* Hide the image on larger screens */
+    .weather-section .weather-icon {
+        font-size: 1rem; /* Restore weather icon size for larger screens */
+        display: inline; /* Ensure the icon appears on larger screens */
     }
 
-    .weather-section .weather-icon {
-        display: inline; /* Show the weather icon on larger screens */
+    .mobile-weather-icon {
+        display: none; /* Hide the image on larger screens */
     }
 }
 
@@ -393,4 +200,3 @@ footer span {
         font-size: 2.5rem;
     }
 }
-1.5
