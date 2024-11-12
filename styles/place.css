@@ -154,7 +154,7 @@ footer span {
     }
 
     .weather-section .weather-icon {
-        font-size: 2rem; /* Increase the weather icon size on mobile */
+        display: none; /* Hide the weather icon on mobile */
     }
 }
 
@@ -180,6 +180,7 @@ footer span {
 
     .weather-section .weather-icon {
         font-size: 1rem; /* Restore weather icon size for larger screens */
+        display: inline; /* Ensure the icon appears on larger screens */
     }
 }
 
@@ -188,3 +189,4 @@ footer span {
         font-size: 2.5rem;
     }
 }
+
