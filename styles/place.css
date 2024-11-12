@@ -62,9 +62,8 @@ main {
 }
 
 .hero-image {
-    width: 100%; /* Full width */
+    width: 100vw; /* Full viewport width */
     height: auto; /* Maintain aspect ratio */
-    max-height: 40vw; /* Adjust height based on your preference */
     object-fit: cover; /* Ensures the image covers the area without distortion */
     border-radius: 0;
     position: relative;
@@ -145,21 +144,17 @@ footer span {
     }
 
     .hero-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 1rem;
+        padding: 0; /* Remove any padding */
+        margin: 0; /* Remove any margin */
+    }
+
+    .hero-image {
+        width: 100vw; /* Ensure full viewport width on mobile */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .weather-section .weather-icon {
-        display: none; /* Hide the weather icon on mobile */
-    }
-
-    .mobile-weather-icon {
-        display: block;
-        width: 200px; /* 2x bigger */
-        height: auto;
-        margin: 1rem auto; /* Center the image */
+        font-size: 2rem; /* Increase the weather icon size on mobile */
     }
 }
 
@@ -183,12 +178,8 @@ footer span {
         right: 20px;
     }
 
-    .mobile-weather-icon {
-        display: none; /* Hide the image on larger screens */
-    }
-
     .weather-section .weather-icon {
-        display: inline; /* Show the weather icon on larger screens */
+        font-size: 1rem; /* Restore weather icon size for larger screens */
     }
 }
 
