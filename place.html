@@ -20,10 +20,11 @@
     <main>
         <div class="hero-section">
             <picture>
-                <source media="(max-width: 600px)" srcset="images/Kampala-1min.webp">
-                <source media="(min-width: 601px)" srcset="images/Kampala-1.webp">
+                <!-- Load `Kampala-1min.webp` for screens up to 767px wide -->
+                <source srcset="images/Kampala-1min.webp" media="(max-width: 767px)">
+                <!-- Default image for larger screens -->
                 <img src="images/Kampala-1.webp" alt="Scenic view of Kampala City" class="hero-image">
-            </picture>
+              </picture>
 
             <div class="overlay data-section card">
                 <h2>Data</h2>
