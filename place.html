@@ -6,79 +6,52 @@
     <meta name="description" content="Information about Kampala, Uganda">
     <meta name="author" content="Owen Kasule Muhereza">
     <title>Kampala, Uganda</title>
-    <!-- Preload Google Fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"></noscript>
-    <!-- Critical CSS inline for initial load optimization -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7fafc;
-            color: #2d3748;
-            overflow-x: hidden;
-        }
-        header {
-            background-color: #0f4c75;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: relative;
-            z-index: 10;
-        }
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin: 0;
-        }
-        header::after {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 4px;
-            background-color: yellow;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-    </style>
-    <link rel="stylesheet" href="styles/place.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Kampala, Uganda</h1>
     </header>
+
     <main>
-        <picture>
-            <!-- Load smaller image for mobile -->
-            <source srcset="images/Kampala-1min.webp" media="(max-width: 767px)">
-            <!-- Default large image for wider screens -->
-            <img src="images/Kampala-1.webp" alt="Scenic view of Kampala City" class="hero-image">
-        </picture>
-        <div class="overlay data-section card">
-            <h2>Data</h2>
-            <ul>
-                <li><strong>Area:</strong> <span>189 sq km</span></li>
-                <li><strong>Population:</strong> <span>1,650,800</span></li>
-                <li><strong>Capital:</strong> <span>Kampala</span></li>
-                <li><strong>Languages:</strong> <span>English, Luganda</span></li>
-                <li><strong>Currency:</strong> <span>Ugandan Shilling (UGX)</span></li>
-                <li><strong>Time Zone:</strong> <span>UTC+3</span></li>
-                <li><strong>Calling Code:</strong> <span>+256</span></li>
-                <li><strong>Internet TLD:</strong> <span>.ug</span></li>
-            </ul>
-        </div>
-        <div class="overlay weather-section card">
-            <h2>Weather <span class="weather-icon">⛅</span></h2>
-            <img src="images/weather_icon.svg" alt="Weather Icon" class="mobile-weather-icon">
-            <ul>
-                <li><strong>Temperature:</strong> <span id="temp">Loading...</span></li>
-                <li><strong>Conditions:</strong> <span id="conditions">Loading...</span></li>
-                <li><strong>Wind:</strong> <span id="wind-speed">Loading...</span></li>
-                <li><strong>Wind Chill:</strong> <span id="wind-chill">Calculating...</span></li>
-            </ul>
+        <!-- Hero Section with srcset for responsive images -->
+        <div class="hero-section">
+            <picture>
+                <source srcset="images/Kampala-1min.webp" media="(max-width: 767px)">
+                <source srcset="images/Kampala-1.webp" media="(min-width: 768px)">
+                <img src="images/Kampala-1.webp" alt="Scenic view of Kampala City" class="hero-image">
+            </picture>
+        
+
+        <!-- Data Section -->
+            <section class="data-section card">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 189 sq km</li>
+                    <li><strong>Population:</strong> 1,650,800</li>
+                    <li><strong>Capital:</strong> Kampala</li>
+                    <li><strong>Languages:</strong> English, Luganda</li>
+                    <li><strong>Currency:</strong> Ugandan Shilling (UGX)</li>
+                    <li><strong>Time Zone:</strong> UTC+3</li>
+                    <li><strong>Calling Code:</strong> +256</li>
+                    <li><strong>Internet TLD:</strong> .ug</li>
+                </ul>
+            </section>
+
+            <!-- Weather Section -->
+            <section class="weather-section card">
+                <h2>Weather <span class="weather-icon">⛅</span></h2>
+                <ul>
+                    <li><strong>Temperature:</strong> <span id="temp">Loading...</span></li>
+                    <li><strong>Conditions:</strong> <span id="conditions">Loading...</span></li>
+                    <li><strong>Wind:</strong> <span id="wind-speed">Loading...</span></li>
+                    <li><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></li>
+                </ul>
+            </section>
         </div>
     </main>
+
     <footer>
         <p>© <span id="currentyear"></span> | Owen Kasule Muhereza | Kampala, Uganda</p>
         <p id="lastModified" class="header-highlight"></p>
