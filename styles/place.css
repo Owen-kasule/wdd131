@@ -30,9 +30,22 @@ header {
     color: white;
     text-align: center;
     padding: 1rem;
-    flex-shrink: 0; /* Prevents header from stretching */
+    flex-shrink: 0;
+    position: relative; /* Add this */
+    z-index: 10; /* Add this */
 }
 
+header::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 11; /* Add this to ensure it's above header */
+}
 header h1 {
     font-family: var(--header-font);
     font-size: 2rem;
@@ -174,6 +187,15 @@ footer span {
 
     footer {
         margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mobile-weather-icon {
+        display: block;
+        width: 200px;
+        height: auto;
+        margin: 1rem auto;
     }
 }
 
