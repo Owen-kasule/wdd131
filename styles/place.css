@@ -21,11 +21,31 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     overflow-x: hidden;
+    min-height: 100vh; /* Ensure body covers the entire viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    font-family: var(--header-font);
+    font-size: 2rem;
+    margin: 0;
 }
 
 main {
-    padding: 0;
-    margin: 0;
+    flex: 1; /* Makes main content stretch to fill the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hero-section {
@@ -33,16 +53,13 @@ main {
     text-align: center;
     width: 100%;
     margin: 0 auto;
+    height: 50vh; /* Increase height of hero section for better emphasis */
 }
 
 .hero-image {
-    width: 100vw;
-    height: 40vw;
-    object-fit: cover;
-    min-height: 250px; /* Set minimum height to prevent layout shift */
-    border-radius: 0;
-    position: relative;
-    z-index: 1;
+    width: 100%;
+    max-height: 80vh; /* Stretch to fill the hero section */
+    object-fit: cover; /* Ensure image covers the area without distortion */
 }
 
 /* Overlay cards */
@@ -52,20 +69,24 @@ main {
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     max-width: 300px;
-    min-height: 250px; /* Set minimum height to prevent layout shift */
+    min-height: 250px;
     z-index: 2;
     margin: 1rem auto;
     width: 90%;
 }
 
 .data-section {
-    margin-top: 5rem; /* Move the data card down a little */
+    margin-top: 5rem;
 }
 
 .weather-section {
-    margin-bottom: 4rem; /* Ensure the weather card does not interfere with the footer */
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Card text styles */
 .card h2 {
     background-color: var(--primary-color);
     color: white;
@@ -76,7 +97,6 @@ main {
     margin-bottom: 1rem;
 }
 
-/* Styling for list items in the card */
 .overlay ul {
     list-style-type: none;
     padding: 0;
@@ -120,7 +140,8 @@ footer span {
 
 /* Responsive styling for mobile screens */
 @media screen and (max-width: 767px) {
-    .data-section, .weather-section {
+    .data-section,
+    .weather-section {
         position: static;
         width: 100%;
         margin-top: 1rem;
@@ -128,8 +149,8 @@ footer span {
     }
 
     .hero-image {
-        width: 100vw;
-        height: auto;
+        width: 100%;
+        height: 50vh; /* Maintain aspect ratio on mobile */
     }
 
     .weather-section .weather-icon {
@@ -138,9 +159,9 @@ footer span {
 
     .mobile-weather-icon {
         display: block;
-        width: 200px; /* 2x bigger */
+        width: 200px;
         height: auto;
-        margin: 1rem auto; /* Center the image */
+        margin: 1rem auto;
     }
 }
 
