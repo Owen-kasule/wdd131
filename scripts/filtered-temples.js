@@ -69,14 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
             location: "Salt Lake City, Utah, United States",
             dedicated: "1893, April, 6",
             area: 253015,
-            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-utah/400x250/salt-lake-utah-temple-wallpaper.jpg"
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/2018/400x250/slctemple7.jpg"
         },
         {
             templeName: "Provo City Center",
             location: "Provo, Utah, United States",
             dedicated: "2016, March, 20",
             area: 85760,
-            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-city-center/400x250/provo-city-center-temple.jpg"
+            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-city-center/2018/400x250/Provo-City-Center-Temple01.jpg"
         }
     ];
 
