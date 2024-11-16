@@ -1,0 +1,65 @@
+/* temples-large.css */
+
+/* Header adjustments for large screens */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+#menu-toggle {
+    display: none; /* Hide the hamburger menu button on larger screens */
+}
+
+/* Navigation - Horizontal layout for larger screens */
+#main-nav {
+    display: flex; /* Show navigation items in a row */
+    flex-direction: row;
+    gap: 2rem;
+    background-color: transparent;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 0.9rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+/* Main content adjustments */
+main {
+    max-width: 1400px; /* Center and limit width on larger screens */
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Gallery adjustments for multi-column layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Multi-column layout */
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    padding: 1.5rem;
+    font-size: 0.875rem;
+}
