@@ -77,7 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
             dedicated: "2016, March, 20",
             area: 85760,
             imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-city-center/2018/400x250/Provo-City-Center-Temple01.jpg"
+        },
+        {
+            templeName: "Nairobi Kenya Temple",
+            location: "Nirobi, Kenya, Africa",
+            dedicated: "2024, March, 3",
+            area: 19184,
+            imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/nairobi-kenya-temple/nairobi-kenya-temple-20358-main.jpg"
         }
+
     ];
 
     // Render temples dynamically
