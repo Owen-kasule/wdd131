@@ -114,8 +114,10 @@ h2 {
 /* Card image */
 .card img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Fixed height for uniform size */
+    object-fit: cover; /* Ensures aspect ratio while fitting within fixed dimensions */
     border-bottom: 2px solid #ddd;
+    display: block;
 }
 
 /* Caption styling */
@@ -157,6 +159,24 @@ footer span {
 }
 
 /* Responsive Design */
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Single-column layout */
+        gap: 1rem;
+    }
+
+    .card {
+        margin: 0.5rem; /* Reduced margin for compact spacing */
+    }
+
+    .card img {
+        height: auto; /* Allow flexible height for smaller viewports */
+    }
+}
+
+/* Medium screens */
 @media screen and (min-width: 768px) {
     header {
         display: flex;
@@ -170,7 +190,7 @@ footer span {
     }
 
     #menu-toggle {
-        display: none;
+        display: none; /* Hide the hamburger menu button on larger screens */
     }
 
     #main-nav {
@@ -181,12 +201,13 @@ footer span {
     }
 
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
     }
 }
 
+/* Large screens */
 @media screen and (min-width: 1024px) {
     .gallery {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
     }
 }
