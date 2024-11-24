@@ -91,13 +91,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const gallery = document.getElementById("temple-gallery");
         gallery.innerHTML = ""; // Clear current content
 
+        const isSmallScreen = window.innerWidth <= 768; // Detect small screens
+
         temples.forEach((temple, index) => {
             const card = document.createElement("div");
             card.classList.add("card");
             card.innerHTML = `
-                <img src="${temple.imageUrl}" 
-                     alt="${temple.templeName}" 
-                     loading="${index === 0 ? 'eager' : 'lazy'}"> <!-- Eager for first image -->
+                <img 
+                    src="${temple.imageUrl}" 
+                    alt="${temple.templeName}" 
+                    loading="${isSmallScreen && index === 0 ? 'eager' : 'lazy'}"> <!-- Eager loading for first image on small screens -->
                 <div class="caption">
                     <h3>${temple.templeName}</h3>
                     <p><strong>Location:</strong> ${temple.location}</p>
