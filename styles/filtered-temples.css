@@ -172,12 +172,20 @@ footer span {
     }
 
     .card img {
-        height: auto; /* Allow flexible height for smaller viewports */
+        height: auto; /* Flexible height for better fit on small screens */
+    }
+
+    header h1 {
+        font-size: 1.25rem; /* Adjusted font size for smaller screens */
+    }
+
+    nav a {
+        font-size: 0.875rem; /* Smaller font size for navigation */
     }
 }
 
 /* Medium screens */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     header {
         display: flex;
         align-items: center;
@@ -190,7 +198,7 @@ footer span {
     }
 
     #menu-toggle {
-        display: none; /* Hide the hamburger menu button on larger screens */
+        display: none; /* Hide hamburger menu on larger screens */
     }
 
     #main-nav {
@@ -201,13 +209,31 @@ footer span {
     }
 
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout for medium screens */
+        gap: 1.5rem;
+    }
+
+    .card img {
+        height: 200px; /* Consistent height for images on medium screens */
     }
 }
 
 /* Large screens */
 @media screen and (min-width: 1024px) {
     .gallery {
-        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
+        grid-template-columns: repeat(3, 1fr); /* Three-column layout for large screens */
+        gap: 2rem;
+    }
+
+    .card {
+        margin: 1rem; /* Standard margin for large screens */
+    }
+
+    .card img {
+        height: 200px; /* Fixed height for consistency */
+    }
+
+    header h1 {
+        font-size: 2.5rem; /* Larger font size for header */
     }
 }
