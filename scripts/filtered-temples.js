@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Preload critical images for improved LCP
+    // Preload critical images for small screens
     const preloadImages = [
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg",
-        "https://churchofjesuschristtemples.org/assets/img/temples/nairobi-kenya-temple/nairobi-kenya-temple-20358-main.jpg",
-        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
     ];
 
     preloadImages.forEach(url => {
@@ -108,16 +106,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const isSmallScreen = window.innerWidth <= 768; // Detect small screens
 
-        temples.forEach((temple) => {
+        temples.forEach((temple, index) => {
             const card = document.createElement("div");
             card.classList.add("card");
             card.innerHTML = `
                 <img 
                     src="${temple.imageUrl}" 
                     alt="${temple.templeName}" 
-                    loading="${isSmallScreen ? 'eager' : 'lazy'}" 
+                    loading="${isSmallScreen && index === 0 ? 'eager' : 'lazy'}" 
                     width="400" 
-                    height="250"> <!-- Prevent layout shifts -->
+                    height="250"> <!-- Explicit dimensions to prevent layout shifts -->
                 <div class="caption">
                     <h3>${temple.templeName}</h3>
                     <p><strong>Location:</strong> ${temple.location}</p>
