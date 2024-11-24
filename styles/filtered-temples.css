@@ -94,23 +94,45 @@ h2 {
     gap: 1rem;
 }
 
-figure {
-    background-color: white;
-    border-radius: 0.5rem;
+/* Card container */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-figure img {
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card image */
+.card img {
     width: 100%;
-    height: 180px;
-    border-radius: 0.5rem;
+    height: auto;
+    border-bottom: 2px solid #ddd;
 }
 
-figcaption {
-    padding: 0.5rem;
+/* Caption styling */
+.card .caption {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.card .caption h3 {
+    font-size: 1.2rem;
     color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.card .caption p {
+    margin: 0.25rem 0;
 }
 
 /* Footer styles */

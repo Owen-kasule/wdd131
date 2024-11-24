@@ -1,4 +1,3 @@
-// temples.js
 document.addEventListener('DOMContentLoaded', () => {
     // Hamburger menu toggle
     const menuToggle = document.getElementById('menu-toggle');
@@ -80,12 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             templeName: "Nairobi Kenya Temple",
-            location: "Nirobi, Kenya, Africa",
+            location: "Nairobi, Kenya, Africa",
             dedicated: "2024, March, 3",
             area: 19184,
             imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/nairobi-kenya-temple/nairobi-kenya-temple-20358-main.jpg"
         }
-
     ];
 
     // Render temples dynamically
@@ -94,15 +92,16 @@ document.addEventListener('DOMContentLoaded', () => {
         gallery.innerHTML = ""; // Clear current content
 
         temples.forEach(temple => {
-            const card = document.createElement("figure");
+            const card = document.createElement("div");
+            card.classList.add("card");
             card.innerHTML = `
                 <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-                <figcaption>
+                <div class="caption">
                     <h3>${temple.templeName}</h3>
                     <p><strong>Location:</strong> ${temple.location}</p>
                     <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
                     <p><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>
-                </figcaption>
+                </div>
             `;
             gallery.appendChild(card);
         });

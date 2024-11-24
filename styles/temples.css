@@ -90,11 +90,12 @@ h2 {
 /* Gallery */
 .gallery {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr; 
+    gap: 0.5rem;
 }
 
-figure {
+/* Card styles */
+.card {
     background-color: white;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -102,13 +103,15 @@ figure {
     text-align: center;
 }
 
-figure img {
-    width: 100%;
-    height: 180px;
-    border-radius: 0.5rem;
+.card img {
+    width: 100%; /* Ensures the image spans the card width */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Maintains aspect ratio while ensuring full coverage */
+    border-bottom: 2px solid #ddd;
+    display: block; /* Ensures no unexpected inline spacing */
 }
 
-figcaption {
+.card .caption {
     padding: 0.5rem;
     color: var(--primary-color);
 }
