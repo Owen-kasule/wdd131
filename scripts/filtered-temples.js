@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Preload critical images for improved LCP
+    const preloadImages = [
+        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg",
+        "https://churchofjesuschristtemples.org/assets/img/temples/nairobi-kenya-temple/nairobi-kenya-temple-20358-main.jpg",
+        "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+    ];
+
+    preloadImages.forEach(url => {
+        const link = document.createElement("link");
+        link.rel = "preload";
+        link.as = "image";
+        link.href = url;
+        document.head.appendChild(link);
+    });
+
     // Hamburger menu toggle
     const menuToggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('main-nav');
@@ -100,7 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img 
                     src="${temple.imageUrl}" 
                     alt="${temple.templeName}" 
-                    loading="${isSmallScreen ? 'eager' : 'lazy'}"> <!-- Eager loading for all images on small screens -->
+                    loading="${isSmallScreen ? 'eager' : 'lazy'}" 
+                    width="400" 
+                    height="250"> <!-- Prevent layout shifts -->
                 <div class="caption">
                     <h3>${temple.templeName}</h3>
                     <p><strong>Location:</strong> ${temple.location}</p>
