@@ -172,8 +172,9 @@ footer span {
     }
 
     .card img {
-        height: auto; /* Flexible height for better fit on small screens */
-        aspect-ratio: 16/9; /* Maintain aspect ratio to reduce layout shifts */
+        width: 100%; /* Full-width for small screens */
+        height: auto; /* Allow flexible height */
+        object-fit: cover; /* Ensure image fits nicely within card */
     }
 
     header h1 {
