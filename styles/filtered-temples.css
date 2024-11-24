@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: var(--body-font);
+    font-family: var(--body-font), Arial, sans-serif; /* Added fallback fonts */
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.6;
@@ -173,6 +173,7 @@ footer span {
 
     .card img {
         height: auto; /* Flexible height for better fit on small screens */
+        aspect-ratio: 16/9; /* Maintain aspect ratio to reduce layout shifts */
     }
 
     header h1 {
