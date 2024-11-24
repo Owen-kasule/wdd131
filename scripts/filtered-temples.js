@@ -91,11 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const gallery = document.getElementById("temple-gallery");
         gallery.innerHTML = ""; // Clear current content
 
-        temples.forEach(temple => {
+        temples.forEach((temple, index) => {
             const card = document.createElement("div");
             card.classList.add("card");
             card.innerHTML = `
-                <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+                <img src="${temple.imageUrl}" 
+                     alt="${temple.templeName}" 
+                     loading="${index === 0 ? 'eager' : 'lazy'}"> <!-- Eager for first image -->
                 <div class="caption">
                     <h3>${temple.templeName}</h3>
                     <p><strong>Location:</strong> ${temple.location}</p>
