@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Product Review</h1>
+    <form action="review.html" method="GET" id="reviewForm">
+      <!-- Product Name -->
+      <label for="productName">Product Name</label>
+      <select id="productName" name="productName" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        <!-- Options populated by JavaScript -->
+      </select>
+
+      <!-- Overall Rating -->
+      <fieldset>
+        <legend>Overall Rating</legend>
+        <label><input type="radio" name="rating" value="1" required> ☆</label>
+        <label><input type="radio" name="rating" value="2"> ☆☆</label>
+        <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
+        <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
+        <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <label for="installationDate">Date of Installation</label>
+      <input type="date" id="installationDate" name="installationDate" required>
+
+      <!-- Useful Features -->
+      <fieldset>
+        <legend>Which features did you find useful?</legend>
+        <label><input type="checkbox" name="features" value="Durability"> Durability</label>
+        <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+        <label><input type="checkbox" name="features" value="Performance"> Performance</label>
+        <label><input type="checkbox" name="features" value="Design"> Design</label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <label for="review">Written Review (Optional)</label>
+      <textarea id="review" name="review" rows="4"></textarea>
+
+      <!-- User Name -->
+      <label for="userName">Your Name (Optional)</label>
+      <input type="text" id="userName" name="userName">
+
+      <!-- Submit Button -->
+      <button type="submit">Post Review</button>
+    </form>
+  </div>
+    <footer>
+        <p>© <span id="currentyear"></span> | Owen Kasule Muhereza | Kampala, Uganda</p>
+        <p id="lastModified" class="header-highlight"></p>
+    </footer>
+</body>
+</html>
