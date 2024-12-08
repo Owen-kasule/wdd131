@@ -3,58 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product Review Form - Submit reviews for products dynamically.">
   <title>Product Review</title>
-  <link rel="stylesheet" href="form.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
-  <div class="form-container">
+  <header>
     <h1>Product Review</h1>
-    <form action="review.html" method="GET" id="reviewForm">
-      <!-- Product Name -->
-      <label for="productName">Product Name</label>
-      <select id="productName" name="productName" required>
-        <option value="" disabled selected>Select a Product ...</option>
-        <!-- Options populated by JavaScript -->
-      </select>
+  </header>
 
-      <!-- Overall Rating -->
-      <fieldset>
-        <legend>Overall Rating</legend>
-        <label><input type="radio" name="rating" value="1" required> ☆</label>
-        <label><input type="radio" name="rating" value="2"> ☆☆</label>
-        <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
-        <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
-        <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
-      </fieldset>
+  <main>
+    <div class="form-container">
+      <form action="review.html" method="GET" id="reviewForm">
+        <!-- Product Name -->
+        <label for="productName">Product Name <span class="required">*</span></label>
+        <select id="productName" name="productName" required>
+          <option value="" disabled selected>Choose a Product ...</option>
+        </select>
 
-      <!-- Date of Installation -->
-      <label for="installationDate">Date of Installation</label>
-      <input type="date" id="installationDate" name="installationDate" required>
+        <!-- Overall Rating -->
+        <fieldset>
+          <legend>Overall Rating <span class="required">*</span></legend>
+          <label><input type="radio" id="rating1" name="rating" value="1" required> ☆</label>
+          <label><input type="radio" id="rating2" name="rating" value="2"> ☆☆</label>
+          <label><input type="radio" id="rating3" name="rating" value="3"> ☆☆☆</label>
+          <label><input type="radio" id="rating4" name="rating" value="4"> ☆☆☆☆</label>
+          <label><input type="radio" id="rating5" name="rating" value="5"> ☆☆☆☆☆</label>
+        </fieldset>
 
-      <!-- Useful Features -->
-      <fieldset>
-        <legend>Which features did you find useful?</legend>
-        <label><input type="checkbox" name="features" value="Durability"> Durability</label>
-        <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
-        <label><input type="checkbox" name="features" value="Performance"> Performance</label>
-        <label><input type="checkbox" name="features" value="Design"> Design</label>
-      </fieldset>
+        <!-- Date of Installation -->
+        <label for="installationDate">Date of Installation <span class="required">*</span></label>
+        <input type="date" id="installationDate" name="installationDate" required>
 
-      <!-- Written Review -->
-      <label for="review">Written Review (Optional)</label>
-      <textarea id="review" name="review" rows="4"></textarea>
+        <!-- Useful Features -->
+        <fieldset>
+          <legend>Which features did you find useful in the product?</legend>
+          <label><input type="checkbox" id="durability" name="features" value="Durability"> Durability</label>
+          <label><input type="checkbox" id="easeOfUse" name="features" value="Ease of Use"> Ease of Use</label>
+          <label><input type="checkbox" id="performance" name="features" value="Performance"> Performance</label>
+          <label><input type="checkbox" id="design" name="features" value="Design"> Design</label>
+        </fieldset>
 
-      <!-- User Name -->
-      <label for="userName">Your Name (Optional)</label>
-      <input type="text" id="userName" name="userName">
+        <!-- Written Review -->
+        <label for="review">Written Review (Optional)</label>
+        <textarea id="review" name="review" rows="4"></textarea>
 
-      <!-- Submit Button -->
-      <button type="submit">Post Review</button>
-    </form>
-  </div>
-    <footer>
-        <p>© <span id="currentyear"></span> | Owen Kasule Muhereza | Kampala, Uganda</p>
-        <p id="lastModified" class="header-highlight"></p>
-    </footer>
+        <!-- User Name -->
+        <label for="userName">Your Name (Optional)</label>
+        <input type="text" id="userName" name="userName">
+
+        <!-- Submit Button -->
+        <button type="submit">Post Review</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="currentyear"></span> | Owen Kasule Muhereza | Kampala, Uganda</p>
+    <p id="lastModified" class="header-highlight"></p>
+  </footer>
+
+  <script src="scripts/form.js"></script>
 </body>
 </html>
